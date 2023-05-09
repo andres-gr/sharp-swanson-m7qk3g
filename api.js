@@ -1,11 +1,11 @@
-const express = require("express");
+import express from "express";
 
-const controllers = require("./controller");
+import { getController, postController } from "./controller";
 
 const api = express.Router();
 
-api.get("/", controllers.getController);
+api.get("/", getController);
 
-api.post("/", controllers.postController);
+api.post("/", postController);
 
-exports.default = api;
+export default api;

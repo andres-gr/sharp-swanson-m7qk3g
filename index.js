@@ -1,13 +1,6 @@
-const app = require("./app").default;
+import app from "./app";
 
-const url = require("url");
-
-Object.defineProperty(global, "__dirname", {
-  __proto__: null,
-  get: () => url.fileURLToPath(process.cwd()),
-});
-
-const PORT = 3000;
+const PORT = 4000;
 
 app.listen(PORT, () => {
   console.log(`🚀 Server is live on port: ${PORT}!`);

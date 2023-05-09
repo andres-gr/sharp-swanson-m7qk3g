@@ -1,6 +1,7 @@
-const cors = require("cors");
-const express = require("express");
-const api = require("./api").default;
+import cors from "cors";
+import express from "express";
+
+import api from "./api";
 
 const app = express();
 
@@ -12,4 +13,4 @@ app.use(cors({ origin: "*" }));
 
 app.use("/", api);
 
-exports.default = app;
+export default app;
