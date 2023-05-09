@@ -5,6 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "nodemon index.js",
+    "dev": "node index.js",
     "build": "echo This is a static template, there is no bundler or bundling involved!"
   },
   "repository": {
