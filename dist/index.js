@@ -21670,6 +21670,13 @@ var __webpack_exports__ = {};
 (() => {
 const app = (__nccwpck_require__(1547)/* ["default"] */ .Z);
 
+const url = __nccwpck_require__(7310);
+
+Object.defineProperty(global, '__dirname', {
+	__proto__: null,
+	get: () => url.fileURLToPath(import.meta.url),
+});
+
 const PORT = 3000;
 
 app.listen(PORT, () => {
