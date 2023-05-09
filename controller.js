@@ -1,23 +1,23 @@
-const DISCOUNT_CODE = "DK64";
+export const DISCOUNT_CODE = "DK64";
 
-const db = new Set();
+export const db = new Set();
 
 const numRegex = /^\d{10}$/;
 
-const numIsValid = (num) => numRegex.test(num);
+export const numIsValid = (num) => numRegex.test(num);
 
-const numExists = (num) => {
+export const numExists = (num) => {
   const getNum = db.has(num);
 
   return getNum;
 };
 
-const getController = (_req, res) => {
+export const getController = (_req, res) => {
   res.send("Heere at the wall");
 };
 
-const postController = (req, res) => {
-  const num = req.body.number;
+export const postController = (req, res) => {
+  const num = req.body?.number;
 
   if (!num) {
     return res.status(400).send("Number not received.");
@@ -36,9 +36,4 @@ const postController = (req, res) => {
   }
 
   return res.status(200).send({ code: DISCOUNT_CODE });
-};
-
-module.exports = {
-  getController,
-  postController,
 };
